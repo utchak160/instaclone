@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -9,14 +10,15 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 export class SignupComponent implements OnInit {
   signUpForm = FormGroup;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+
     // @ts-ignore
     this.signUpForm = new FormGroup({
       userData: new FormGroup({
-        firstname: new FormControl(null, Validators.required),
-        lastname: new FormControl(null, Validators.required),
+        firstName: new FormControl(null, Validators.required),
+        lastName: new FormControl(null, Validators.required),
         email: new FormControl(null, Validators.required),
         pswrd: new FormControl(null, Validators.required),
         pswrd1: new FormControl(null, Validators.required),
@@ -27,6 +29,10 @@ export class SignupComponent implements OnInit {
   }
   onSignup() {
     console.log(this.signUpForm);
+  }
+  onclick() {
+    this.router.navigate(['']);
+    console.log('Succesfully Registered!');
   }
 }
 

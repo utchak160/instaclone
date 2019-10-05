@@ -1,4 +1,3 @@
-<div class="jumbotron">
 <div class="container">
   <div class="row">
     <div class=" col-12 col-sm-12 col-md-12 col-lg-12 my-4">
@@ -8,37 +7,32 @@
 
     <form [formGroup]="signUpForm" (ngSubmit)="onSignup()">
       <div formGroupName="userData">
-<!--        <div class="form-group">-->
           <mat-form-field appearance="outline">
             <mat-label>
               First Name
             </mat-label>
             <input matInput
                    type="text"
-                   name="firstname"
+                   name="firstName"
                    autocomplete="off"
-                   formControlName="firstname">
+                   formControlName="firstName">
           </mat-form-field>
-
-          <span *ngIf="!signUpForm.get('userData.firstname').valid && signUpForm.get('userData.firstname').touched"
+        <br>
+          <span *ngIf="!signUpForm.get('userData.firstName').valid && signUpForm.get('userData.firstName').touched"
                 class="help-block">Please enter a valid name!</span>
-<!--        </div>-->
-<!--        <div class="form-group">-->
           <mat-form-field appearance="outline">
             <mat-label>
               Last Name
             </mat-label>
             <input matInput
                    type="text"
-                   name="lastname"
+                   name="lastName"
                    autocomplete="off"
-                   formControlName="lastname">
+                   formControlName="lastName">
           </mat-form-field>
 
-          <span *ngIf="!signUpForm.get('userData.lastname').valid && signUpForm.get('userData.lastname').touched"
+          <span *ngIf="!signUpForm.get('userData.lastName').valid && signUpForm.get('userData.lastName').touched"
                 class="help-block">Please enter a valid name!</span>
-<!--        </div>-->
-
         <div class="form-group">
           <mat-form-field appearance="outline">
             <mat-label>
@@ -100,11 +94,11 @@
 
     <div class="clearfix">
       <button type="button" class="btn btn-danger">Cancel</button>
-      <button type="submit" class="btn btn-success">Sign Up</button>
+      <button type="submit" class="btn btn-success" (click)="onclick()">Sign Up</button>
     </div>
   </div>
 </form>
 </div>
 </div>
 </div>
-</div>
+

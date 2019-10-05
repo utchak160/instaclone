@@ -25,7 +25,7 @@
             </mat-form-field>
             <br>
             <span *ngIf="!loginForm.get('userData.username').valid && loginForm.get('userData.username').touched"
-                  class="help-block">Please enter a valid email!</span>
+                  class="help-block">Please enter a valid Username!</span>
           </div>
           <div class="form-group">
             <mat-form-field appearance="outline">
@@ -40,22 +40,8 @@
           </div>
           <button type="submit" class="btn btn-primary">Login</button>
           <hr>
-          <p>Don't have an account? <a class href="#">Sign Up</a></p>
+          <p>Don't have an account? <a routerLink="/signup">Sign Up</a></p>
         </div>
-        <p>or sign in with:</p>
-        <a type="button" class="btn-floating btn-fb btn-sm">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a type="button" class="btn-floating btn-tw btn-sm">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a type="button" class="btn-floating btn-li btn-sm">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a type="button" class="btn-floating btn-git btn-sm">
-          <i class="fab fa-github"></i>
-        </a>
-
         </form>
   </div>
 </div>
