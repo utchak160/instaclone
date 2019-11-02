@@ -12,12 +12,18 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import {RouterModule} from '@angular/router';
 import {ReactiveFormsModule} from '@angular/forms';
+import { BodyComponent } from './body/body.component';
+import {MatButtonModule} from '@angular/material/button';
+import { HeaderComponent } from './header/header.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    BodyComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +35,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     MatInputModule,
     RouterModule,
     ReactiveFormsModule,
+    MatButtonModule,
+    MatToolbarModule,
 
   ],
   providers: [],

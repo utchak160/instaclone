@@ -1,19 +1,20 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-lg-6">
       <h1>Images</h1>
+<!--      <img src="https://media.sproutsocial.com/uploads/2018/07/instagram-tv.png" alt="insta">-->
     </div>
-    <div class="col-md-6">
+    <div class=" text-centre col-lg-6">
 <div class="container">
   <div class="row">
     <div class="text-center col-12 col-sm-12 col-md-12 col-lg-12 my-4">
-      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <form class="example-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div formGroupName="userData">
           <h1 style="font-family: sans-serif">Instagram</h1>
           <hr>
           <h3>Login Form</h3>
           <div class="form-group">
-            <mat-form-field appearance="outline">
+            <mat-form-field class="example-full-width" appearance="outline">
               <mat-label>
                 Username
               </mat-label>
@@ -28,22 +29,24 @@
                   class="help-block">Please enter a valid Username!</span>
           </div>
           <div class="form-group">
-            <mat-form-field appearance="outline">
+            <mat-form-field class="example-full-width" appearance="outline">
               <mat-label>
                 Password
               </mat-label>
-              <input matInput type="password" name="pswrd" autocomplete="off" formControlName="pswrd">
+              <input matInput type="password" name="password" autocomplete="off" formControlName="password">
             </mat-form-field>
             <br>
-            <span *ngIf="!loginForm.get('userData.pswrd').valid && loginForm.get('userData.pswrd').touched"
+            <span *ngIf="!loginForm.get('userData.password').valid && loginForm.get('userData.password').touched"
                   class="help-block">Please enter a valid Password!</span>
           </div>
-          <button type="submit" class="btn btn-primary">Login</button>
+          <button type="submit" class="btn btn-primary" mat-raised-button><a style="color: white" routerLink="/header" >Login</a></button>
           <hr>
-          <p>Don't have an account? <a routerLink="/signup">Sign Up</a></p>
+          <p>Don't have an account? <a routerLink="/signUp">Sign Up</a></p>
         </div>
         </form>
   </div>
 </div>
 </div>
+    </div>
+  </div></div>
 
