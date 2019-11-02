@@ -1,6 +1,28 @@
-.collapse-content .fa.fa-heart:hover {
-  color: #f44336 !important;
+.example-card {
+  max-width: 600px;
 }
-.collapse-content .fa.fa-share-alt:hover {
-  color: #0d47a1 !important;
+
+.example-header-image {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSegaQb2F5_wJKhvTX0YudgsCPiyhHbm3pZFr9l8Yn_Z89B8rYC');
+  background-size: cover;
 }
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+mat-card-actions {
+  display: flex;
+}
+i {
+  margin: 5px;
+}
+.saved {
+  float: right;
+}
+
+

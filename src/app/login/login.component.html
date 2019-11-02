@@ -1,19 +1,20 @@
-<div class="container">
+
   <div class="row">
-    <div class="col-lg-6">
-      <h1>Images</h1>
-<!--      <img src="https://media.sproutsocial.com/uploads/2018/07/instagram-tv.png" alt="insta">-->
+    <div class="col-lg-4 col-md-4 col-sm-2 col-xs-2">
+      <img class="cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRezLRKrD4MIXErpkWpPh7cuVSFX_u5s-Ay8X2SozAS8eo0X9qW" alt="Insta" >
     </div>
-    <div class=" text-centre col-lg-6">
+    <div class="col-lg-2"></div>
+    <div class=" col-lg-6 col-md-6 col-sm-4 col-xs-4">
 <div class="container">
   <div class="row">
     <div class="text-center col-12 col-sm-12 col-md-12 col-lg-12 my-4">
       <form class="example-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div formGroupName="userData">
+          <div class="example-container">
           <h1 style="font-family: sans-serif">Instagram</h1>
           <hr>
           <h3>Login Form</h3>
-          <div class="form-group">
+
             <mat-form-field class="example-full-width" appearance="outline">
               <mat-label>
                 Username
@@ -24,29 +25,35 @@
                      autocomplete="off"
                      formControlName="username">
             </mat-form-field>
-            <br>
+
             <span *ngIf="!loginForm.get('userData.username').valid && loginForm.get('userData.username').touched"
                   class="help-block">Please enter a valid Username!</span>
-          </div>
-          <div class="form-group">
-            <mat-form-field class="example-full-width" appearance="outline">
+
+
+            <mat-form-field
+              class="example-full-width"
+              appearance="outline">
               <mat-label>
                 Password
               </mat-label>
-              <input matInput type="password" name="password" autocomplete="off" formControlName="password">
+              <input matInput
+                     type="password"
+                     name="password"
+                     autocomplete="off"
+                     formControlName="password">
             </mat-form-field>
-            <br>
             <span *ngIf="!loginForm.get('userData.password').valid && loginForm.get('userData.password').touched"
                   class="help-block">Please enter a valid Password!</span>
-          </div>
-          <button type="submit" class="btn btn-primary" mat-raised-button><a style="color: white" routerLink="/header" >Login</a></button>
+            <mat-spinner *ngIf="showSpinner"></mat-spinner>
+          <button mat-button type="submit" class="btn btn-primary" mat-raised-button (click)="onLogin()">Login</button>
           <hr>
           <p>Don't have an account? <a routerLink="/signUp">Sign Up</a></p>
+        </div>
         </div>
         </form>
   </div>
 </div>
 </div>
     </div>
-  </div></div>
+  </div>
 

@@ -1,4 +1,16 @@
+h1 {
+  color: blue;
+}
 button{
   margin: 10px;
 }
+.mat-form-field {
+}
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
 
+.example-container > * {
+  width: 100%;
+}

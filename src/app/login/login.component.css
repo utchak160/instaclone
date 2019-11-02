@@ -1,9 +1,14 @@
+.cover {
+  height: 300px;
+  width: 150px;
+  margin: 50px;
+}
 .example-container {
   display: flex;
   flex-direction: column;
 }
 
-.example-container > * {
+.example-container {
   width: 100%;
 }
 h3{
@@ -18,3 +23,4 @@ h3{
 .example-full-width{
   width: 100%;
 }
+
