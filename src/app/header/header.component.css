@@ -2,7 +2,20 @@
   justify-content: space-between;
   margin-bottom: 10px;
   margin-top: 10px;
+  position: center;
+}
+.font {
+  max-width: 250px;
+}
+.logo {
+  max-width: 50px;
 }
 span {
   padding-right: 1rem;
+}
+.body{
+  max-width: 950px;
+  align-content: center;
+  margin: 10px auto;
+  padding: 50px;
 }

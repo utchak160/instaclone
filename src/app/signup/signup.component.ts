@@ -9,10 +9,12 @@ import {Router} from '@angular/router';
 })
 export class SignupComponent implements OnInit {
   signUpForm = FormGroup;
+  submitted = false;
 
   constructor(private router: Router) { }
 
   ngOnInit() {
+
 
     // @ts-ignore
     this.signUpForm = new FormGroup({
@@ -20,8 +22,8 @@ export class SignupComponent implements OnInit {
         firstName: new FormControl(null, Validators.required),
         lastName: new FormControl(null, Validators.required),
         email: new FormControl(null, Validators.required),
-        pswrd: new FormControl(null, Validators.required),
-        pswrd1: new FormControl(null, Validators.required),
+        pswrd: new FormControl(null, [Validators.required, Validators.minLength(8)]),
+        pswrd1: new FormControl(null, [Validators.required, Validators.minLength(8)]),
         mobile: new FormControl(null, Validators.required),
       })
   });
@@ -31,9 +33,15 @@ export class SignupComponent implements OnInit {
     console.log(this.signUpForm);
   }
   onclick() {
+    this.submitted = true;
     this.router.navigate(['']);
-    console.log('Succesfully Registered!');
+    alert('Successfully Registered!');
+    console.log('Successfully Registered!');
   }
+  // onCancel() {
+  //   this.submitted = false;
+  //   this.signUpForm.reset();
+  // }
 }
 
 

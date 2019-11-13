@@ -9,6 +9,7 @@ const routes: Routes = [];
 @NgModule({
   imports: [RouterModule.forRoot([
     {path: '', component: LoginComponent},
+    { path: 'login', component: LoginComponent},
     {path: 'signUp', component: SignupComponent},
     {path: 'header', component: HeaderComponent},
   ])],

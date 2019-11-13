@@ -1,59 +1,80 @@
-
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-2 col-xs-2">
-      <img class="cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRezLRKrD4MIXErpkWpPh7cuVSFX_u5s-Ay8X2SozAS8eo0X9qW" alt="Insta" >
+<div class="container-fluid">
+<div class="row">
+    <div class="col-md-6">
+      <img class="cover" src="../../assets/images/original.gif"
+           alt="Insta">
     </div>
-    <div class="col-lg-2"></div>
-    <div class=" col-lg-6 col-md-6 col-sm-4 col-xs-4">
-<div class="container">
-  <div class="row">
-    <div class="text-center col-12 col-sm-12 col-md-12 col-lg-12 my-4">
-      <form class="example-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-        <div formGroupName="userData">
-          <div class="example-container">
-          <h1 style="font-family: sans-serif">Instagram</h1>
-          <hr>
-          <h3>Login Form</h3>
+    <div class="text-center col-md-6 col-sm-12">
+            <form class="example-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <div formGroupName="userData">
+                <div class="example-container">
+                  <img src="../../assets/images/font.png">
+                  <hr>
+                  <h3>Login Form</h3>
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>
+                      Username
+                    </mat-label>
+                    <input matInput
+                           type="text"
+                           name="username"
+                           autocomplete="off"
+                           formControlName="username" required>
+                  </mat-form-field>
 
-            <mat-form-field class="example-full-width" appearance="outline">
-              <mat-label>
-                Username
-              </mat-label>
-              <input matInput
-                     type="text"
-                     name="username"
-                     autocomplete="off"
-                     formControlName="username">
-            </mat-form-field>
-
-            <span *ngIf="!loginForm.get('userData.username').valid && loginForm.get('userData.username').touched"
-                  class="help-block">Please enter a valid Username!</span>
+                  <span *ngIf="!loginForm.get('userData.username').valid && loginForm.get('userData.username').touched"
+                        class="help-block">Please enter a valid Username!</span>
 
 
-            <mat-form-field
-              class="example-full-width"
-              appearance="outline">
-              <mat-label>
-                Password
-              </mat-label>
-              <input matInput
-                     type="password"
-                     name="password"
-                     autocomplete="off"
-                     formControlName="password">
-            </mat-form-field>
-            <span *ngIf="!loginForm.get('userData.password').valid && loginForm.get('userData.password').touched"
-                  class="help-block">Please enter a valid Password!</span>
-            <mat-spinner *ngIf="showSpinner"></mat-spinner>
-          <button mat-button type="submit" class="btn btn-primary" mat-raised-button (click)="onLogin()">Login</button>
-          <hr>
-          <p>Don't have an account? <a routerLink="/signUp">Sign Up</a></p>
-        </div>
-        </div>
-        </form>
+                  <mat-form-field
+                    class="example-full-width"
+                    appearance="outline">
+                    <mat-label>
+                      Password
+                    </mat-label>
+                    <input matInput
+                           type="password"
+                           name="password"
+                           autocomplete="off"
+                           formControlName="password" required>
+                  </mat-form-field>
+                  <span *ngIf="!loginForm.get('userData.password').valid && loginForm.get('userData.password').touched"
+                        class="help-block">Please enter a valid Password!</span>
+                  <mat-spinner *ngIf="showSpinner"></mat-spinner>
+                  <button mat-button type="submit" class="btn btn-primary" mat-raised-button (click)="onLogin()">Login
+                  </button>
+                  <br>
+                  <strong>OR</strong>
+                  <a href="#" class="fb"> <img src="../../assets/images/facebook-login.png"> Login with Facebook</a>
+                  <hr>
+                  <p>Don't have an account? <a routerLink="/signUp">Sign Up</a></p>
+                </div>
+              </div>
+            </form>
+      <div class="text-centre">
+        <p>Get the app.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3DXVV-AAALAAFUV9_D4E82ROD1H-QF%26utm_content%3Dlo%26utm_medium%3Dbadge" target="_blank"><img class="play" src="../../assets/images/play.png"></a>
+        <a href="https://apps.apple.com/app/instagram/id389801252?vt=lo" target="_blank"><img class="play" src="../../assets/images/play1.png"></a>
+      </div>
+    </div>
   </div>
 </div>
-</div>
-    </div>
+<br>
+<br>
+<div class="text-centre">
+  <div class="link">
+    <a href="https://www.instagram.com/about/us/" style="text-decoration-line: none;font-size:15px; ">ABOUT US</a>&nbsp;&nbsp;&nbsp;
+    <a href="https://help.instagram.com/" style="text-decoration-line: none;font-size:15px;">SUPPORT</a>&nbsp;&nbsp;&nbsp;
+    <a href="https://instagram-press.com/" style="text-decoration-line: none;font-size:15px;">PRESS</a>&nbsp;&nbsp;&nbsp;
+    <a href="https://www.instagram.com/developer/" style="text-decoration-line: none;font-size:15px;">API</a>&nbsp;&nbsp;&nbsp;
+    <a href="https://www.instagram.com/about/jobs/" style="text-decoration-line: none;font-size:15px;">JOBS</a>&nbsp;&nbsp;&nbsp;
+    <a href="https://help.instagram.com/519522125107875" style="text-decoration-line: none;font-size:15px;">PRIVACY</a>&nbsp;&nbsp;&nbsp;
+<!--    <a href="https://help.instagram.com/581066165581870" style="text-decoration-line: none;font-size:15px;">TERMS</a>&nbsp;&nbsp;&nbsp;-->
+    <a href="https://www.instagram.com/explore/locations/DIRECTORY" style="text-decoration-line: none;font-size:15px;"></a>&nbsp;
+<!--    <a href="https://www.instagram.com/directory/profiles/" style="text-decoration-line: none;font-size:15px;">PROFILES</a>&nbsp;&nbsp;&nbsp;-->
+<!--    <a href="https://www.instagram.com/directory/hashtags/" style="text-decoration-line: none;font-size:15px;">HASHTAGS</a>-->
   </div>
+</div>
+
+
 

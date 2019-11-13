@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Cards } from '../Cards';
 
 @Component({
   selector: 'app-body',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./body.component.css']
 })
 export class BodyComponent implements OnInit {
+  Cards = Cards;
 
   constructor() { }
 
