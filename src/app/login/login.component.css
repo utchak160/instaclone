@@ -15,7 +15,7 @@
   margin: 10px auto;
   padding: 50px;
   background-color: white;
-  border: 1px solid black;
+  border: 1px solid #e6e6e6;
 }
 .example-container {
   display: flex;

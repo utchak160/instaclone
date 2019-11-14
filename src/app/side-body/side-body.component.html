@@ -1,1 +1,20 @@
-<p>side-body works!</p>
+<div class="side-body">
+  <div class="title">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>utchak_160</mat-card-title>
+      <mat-card-subtitle>Utkarsh Chakravarty</mat-card-subtitle>
+    </mat-card-header>
+  </div>
+  <strong style="color: lightgrey">Stories</strong>
+  <div class="box">
+    <div *ngFor="let Card of Cards">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{ Card.name }}</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+    </div>
+  </div>
+</div>
+

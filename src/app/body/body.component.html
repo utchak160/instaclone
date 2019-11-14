@@ -7,9 +7,10 @@
     </mat-card-header>
     <img mat-card-image src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTECYi1AapNnpLdnLh3jI53QSrrKRedFLnTN-90-sJJSjzFy85g" alt="Photo of a Shiba Inu">
     <mat-card-actions>
-      <div><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+      <div *ngIf="touched"><i style="color: red" class="fas fa-heart"></i> </div>
+      <div *ngIf="!touched">  <i (click)="touch()" class="fa fa-heart-o" aria-hidden="true"></i></div>
       <div><i class="fa fa-share-alt" aria-hidden="true"></i></div>
-      <div class="saved"><i class="fa fa-bookmark-o" aria-hidden="true"></i></div>
+      <div (click)="saved()" class="saved"><i class="fa fa-bookmark-o" aria-hidden="true"></i></div>
     </mat-card-actions>
     <mat-card-content>
      <p>Liked by <strong>1,230 people</strong></p>

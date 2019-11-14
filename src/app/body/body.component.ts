@@ -8,10 +8,16 @@ import { Cards } from '../Cards';
 })
 export class BodyComponent implements OnInit {
   Cards = Cards;
+  touched = false;
 
   constructor() { }
 
   ngOnInit() {
   }
-
+  touch() {
+    this.touched = true;
+  }
+  saved() {
+    alert('Successfully added in your saved list!');
+  }
 }

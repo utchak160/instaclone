@@ -10,6 +10,18 @@ export const Cards = [
   {
     name: 'Phone Standard',
     description: 'Simplicity is the best thing'
+  },
+  {
+    name: 'Microsoft',
+    description: 'Great company'
+  },
+  {
+    name: 'teamconatus',
+    description: 'Best technical society'
+  },
+  {
+    name: 'Google',
+    description: 'Angular is made by google'
   }
 ];
 
