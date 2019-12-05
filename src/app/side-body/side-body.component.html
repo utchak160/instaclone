@@ -16,5 +16,24 @@
       </mat-card-header>
     </div>
   </div>
+  <br>
+  <p style="color: lightgrey; margin-bottom: 0px;">Suggestions for you</p>
+  <div class="box2">
+    <div *ngFor="let Card of Cards">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image1"></div>
+        <mat-card-title>{{ Card.name }}</mat-card-title>
+        <mat-card-subtitle>{{ Card.description }}</mat-card-subtitle>
+      </mat-card-header>
+    </div>
+  </div>
+  <div class="text-centre">
+    <div class="link">
+      <a href="https://www.instagram.com/about/us/" style="text-decoration-line: none;font-size:12px;color: lightgrey ">ABOUT US</a>&nbsp;&nbsp;&nbsp;
+      <a href="https://help.instagram.com/" style="text-decoration-line: none;font-size:12px;color: lightgrey">SUPPORT</a>&nbsp;&nbsp;&nbsp;
+      <a href="https://instagram-press.com/" style="text-decoration-line: none;font-size:12px;color: lightgrey">PRESS</a>&nbsp;&nbsp;&nbsp;
+      <a href="https://www.instagram.com/developer/" style="text-decoration-line: none;font-size:12px;color: lightgrey">API</a>&nbsp;&nbsp;&nbsp;
+</div>
+  </div>
 </div>
 

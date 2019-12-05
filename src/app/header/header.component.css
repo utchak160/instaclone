@@ -2,20 +2,23 @@
   justify-content: space-between;
   margin-bottom: 10px;
   overflow: hidden;
-  background-color: azure;
+  background-color: white;
   border-bottom: 1px solid black;
-
-  /*transition: 0.4s; !* Adds a transition effect when the padding is decreased *!*/
-  position: fixed; /* Sticky/fixed navbar */
+  position: fixed;
   width: 100%;
-  top: 0; /* At the top */
+  top: 0;
   z-index: 99;
+}
+.search-box {
+  max-height: fit-content;
 }
 .font {
   max-width: 250px;
 }
 .logo {
   max-width: 50px;
+  border-right: 2px solid black;
+  position: absolute;
 }
 span {
   padding-right: 1rem;
